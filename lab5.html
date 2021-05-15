@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+	<style>
+		body{
+			margin: 0;
+			background-color: #FFD700;
+		}
+		.header{
+			font-size: 20px;
+			color: #820024;
+			display: flex;
+			justify-content: space-around;
+			padding-left: 100px;
+			padding-right: 100px;
+			cursor:pointer;
+
+		}
+		.header>div{
+			padding: 40px;
+		}
+		#main{
+			display: flex;
+		}
+		.text{
+			padding-top: 100px;
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+		#main>img{
+			padding-top: 50px;
+		}
+	</style>
+	</head>
+<body>
+	<div class="header">
+		<img onclick="window.location.reload()" src="https://www.freepnglogos.com/uploads/coffee-logo-png/coffee-logo-symbol-19.png" style="width: 100px; height: 100px; ">
+		<div id="coffee" onclick="change(this)" onmouseover="big(this)" onmouseout="sml(this)" >Coffee</div>
+		<div onclick="change(this)" onmouseover="big(this)" onmouseout="sml(this)" >Order Online</div>
+		<div  onclick="change(this)" onmouseover="big(this)" onmouseout="sml(this)" >About Us</div>
+		<div onmouseover="big(this)" onmouseout="sml(this)">Contacts</div>
+	</div>
+	</div>
+	<div id="main">
+		<img id="img1" src="https://furnaceacsolutions.com/wp-content/uploads/2017/09/26-2-coffee-png-hd.png" alt = "logo"  >
+		<div class="text">
+		<p id="p1" style="font-size: 100px; padding-bottom: 30px;">Welcome to our coffee shop!</p>
+		<p style="font-size: 20px; ">Coffee is a brewed drink prepared from roasted coffee beans, the seeds of berries from certain Coffea species. When coffee berries turn from green to bright red in color – indicating ripeness – they are picked, processed, and dried.</p>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function change(element){
+			var a = element.innerHTML;
+			switch(a){
+				case"Coffee":
+				document.getElementById("img1").src = "https://purepng.com/public/uploads/large/purepng.com-coffee-beanscoffee-beanscoffeestone-fruitpeaberry-14115272416419ytca.png";
+				document.getElementById("p1").innerHTML = "COFFEE";
+				break;
+				case("About Us"):
+				document.getElementById("img1").src = "https://i.pinimg.com/originals/bf/fc/72/bffc72c330c193e51f676e7f8cf520a7.png";
+				document.getElementById("p1").innerHTML = "About Us";
+				break;
+				case("Order Online"):
+				document.getElementById("img1").src = "https://pngarchive.com/public/uploads/preview/iced-coffee-1001568244003ttsm77vkob.png";
+				document.getElementById("p1").innerHTML = "Order Online";
+				break;
+			}
+		}
+		function big(element){
+			element.style.fontSize = "25px";
+		}
+		function sml(element){
+			element.style.fontSize = "20px";
+		}
+	</script>
+</body>
+</html>

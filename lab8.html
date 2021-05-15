@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet/less" type="text/css" href="style.less" />
+<script src="//cdn.jsdelivr.net/npm/less" ></script>
+</head>
+	<style>
+		body{
+			margin: 0;
+		}
+		button{
+			font-family: 'Cuprum', sans-serif;
+		}
+		.header{
+			display: flex;
+			justify-content: flex-end;
+			padding: 20px;
+			font-size: 18px;
+			font-family: 'Ubuntu', sans-serif;
+			text-indent: 30px;
+			padding-right: 150px;
+			cursor:pointer;
+			background-color: #E6E6FA;
+		}
+		.ba1{
+			
+		}
+		.ba1 >h1{
+			margin: 0;
+			padding-top: 130px;
+        }
+		.w1{
+			border:1px solid white;
+			width: 400px;
+			padding: 20px 0 20px 0;
+			text-align: center;
+			color: white;
+			margin-top: 20px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.box{
+             display: flex;
+             justify-content: space-around;
+             flex-wrap: wrap;
+             margin-bottom: 40px;
+         }
+         .box-it{
+            background-attachment: fixed;
+            
+            
+         }
+         .box-it button{
+             background-color: #820024;
+             border-radius: 20px;
+             padding: 3px 29px;
+             color: white;
+             ;
+         }
+         .p1{
+         	padding-top: 20px;
+         }
+         #s1{
+         	padding: 30px;
+         }
+		</style>
+</head>
+<body>
+
+<div class="ba1">
+		<div class="header">
+		<div id="user_name">For Parents</div>
+		<div  >Ask Question</div>
+		<div id="signin" onclick="popup()">Log In</div>
+	</div>
+			<img onclick="home()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Brainly_logo.svg/1200px-Brainly_logo.svg.png " style="width: 100px; height: 50px;position:absolute; margin-top: -55px; margin-left: 50px; ">
+	</div>
+	<div id="s1">
+		
+		<h3 style="padding-left: 100px;  font-family: 'Ubuntu', sans-serif;">SUBJECTS</h3>
+		
+	</div>
+      
+        <div class="box">
+     
+        <div class="box-it">
+        	<img src="litra.jpg" alt="photo" style="width: 230px; height: 200px; border-radius: 10%;cursor:pointer;" onclick="change3()">
+  	        <b><p class="p1" style="font-size: 18px;text-align: center;">Literature</p></b>           
+        </div>
+
+        <div class="box-it">
+        	<img src="math.jpg" alt="photo" style="width: 230px; height: 200px; border-radius: 10%;cursor:pointer;" onclick="change4()">
+  	        <b><p class="p1" style="font-size: 18px;text-align: center;">Math</p></b>
+        </div>
+
+        <div class="box-it">
+        	<img src="history.jpg" alt="photo" style="width: 230px; height: 200px; border-radius: 10%;cursor:pointer;" onclick="change2()">
+  	        <b><p class="p1" style="font-size: 18px;text-align: center;" >History</p></b>       
+        </div>
+        <div class="box-it">
+        	<img src="inform.jpg" alt="photo" style="width: 230px; height: 200px; border-radius: 10%;cursor:pointer;" onclick="change1()">
+  	        <b><p class="p1" style="font-size: 18px;text-align: center;" >Computer Science</p></b>      
+        </div>
+    </div>
+   
+    <div class="main" style="background-color: #F0F8FF;">
+	
+		<div style="display: flex;">
+			<img style="width: 400px; height: 400px;border-radius: 10%; margin-left:70px;margin-right:70px;margin-top: 100px;" src="https://image.freepik.com/free-vector/football-player-illustration_23-2147525029.jpg">
+		<pre style="background-color: #F0F8FF; width: 820px; height: 650px;">
+			<h2 style="margin:0; text-align: center;">Football team task Java</h2>
+			<code>
+	import java.util.Scanner;   
+	import java.util.Random;            
+	    
+	public class InputTwoFootballTeam  
+	{
+	    public static void main(String[] args) {
+	     System.out.println("------HELP------");
+	      System.out.println("Write two teams:");                           
+	      System.out.println("'A.c Milan vs Real  Madrid'."); 
+	        System.out.println();
+	        Scanner ekipi = new
+	        Scanner(System.in);
+	        String eekipi = ekipi.nextLine();
+	        Random r = new Random ();
+	        Random rd = new Random ();
+	        
+	            int a; int b;
+	          a = r.nextInt(6); 
+	          b = rd.nextInt(6); 
+	         
+	        System.out.println("------Match------");
+	        System.out.println(eekipi +" "+ a +"-"+b);
+	        if (a == b){
+	         System.out.println("It's a draw."); }
+	        else if (a > b) {System.out.print("Wonderful win for home team.");}
+	        else {System.out.println("Amazing win for guest team.");}
+	        
+	        
+	    }
+	}
+			</code>
+		</pre>
+</div>
+<div style="background-color: #E0FFFF;padding: 40px;">
+	<h4>Output is: <del>None</del><blockquote>------HELP------
+Write two teams:
+'A.c Milan vs Real  Madrid'.
+
+------Match------
+2 3-0
+Wonderful win for home team.</blockquote>  </h4>
+<h5>copy this output press:<kbd>ctrl</kbd>+<kbd>C</kbd> or <kbd>cmd</kbd>+<kbd>C</kbd></h5>
+</div>
+</div>
+
+<script type="text/javascript">
+	function home(){
+    location.href = "file:///Users/ajsaule/Desktop/web%20prog/order.html";
+    }
+	function change1(){
+    location.href = "file:///Users/ajsaule/Desktop/web%20prog/lab8.html";
+    }
+	function change2(){
+    location.href = "file:///Users/ajsaule/Desktop/web%20prog/lab8hist.html";
+    }
+    function change3(){
+    location.href = "file:///Users/ajsaule/Desktop/web%20prog/lab8lit.html";
+    }
+    function change4(){
+    location.href = "file:///Users/ajsaule/Desktop/web%20prog/lab8math.html";
+    }
+</script>
+
+</body>
+</html>

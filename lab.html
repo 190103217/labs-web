@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method="get" action="lab3.php">
+<table>
+	<tr>
+		<td>Brand</td>
+		<td>Release date</td>
+		<td>Weight</td>
+		<td>Color</td>
+	</tr>
+	<tr>
+		<td><input type="text" name="brand"></td>
+		<td><input type="date" name="release_date"></td>
+		<td><input type="text" name="weight"></td>
+		<td><input type="text" name="color"></td>
+	</tr>
+</table>
+<input id="indicator" type="hidden" name="state">	
+
+<input type="submit" value="add" onclick="add()">
+<input style="margin: 5px;" type="submit" value="select" onclick="select2()">
+<input style="margin: 5px;" type="submit" value="update" onclick="update()">
+<input style="margin: 5px;" type="submit" value="delete" onclick="delete2()">
+</form>
+<script type="text/javascript">
+	function add() {
+		document.getElementById("indicator").value="add";
+	}
+	function select2() {
+		document.getElementById("indicator").value="select";
+	}
+	function update() {
+		document.getElementById("indicator").value="update";
+	}
+	function delete2() {
+		document.getElementById("indicator").value="delete";
+	}
+</script>
+
+</body>
+</html>

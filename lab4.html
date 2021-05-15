@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+	body{
+		background-color: #FFF8DC;
+	}
+	.as1{
+	background-color: #DEB887;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 100px; 
+	text-align: center;
+	padding-top: 70px;
+	border-color: #D3D3D3;
+	border-radius: 5px;
+	 }
+	 .calc{
+	 	background-color: #DEB887; 
+	 	width: 200px;
+		height: 155px;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 20px 25px;
+		border-color: #D3D3D3;
+		border-radius: 5px; 
+	 }
+	 .bb{
+	 	border-radius: 30px;
+	 	background-color: #CD853F;
+	 	border: 0.5px solid #000000;
+	 	padding: 5px 11px;
+	 	color: #800000;
+	 }
+	 .divis{
+	 	background-color: #DEB887; 
+	 	margin-left: auto;
+		margin-right: auto;
+		width: 400px;
+		height: 80px;
+		text-align: center;
+		padding-top: 50px;
+	 }
+	    <title>First task</title>
+</style>
+
+</head>
+<body>
+	<h2 style="text-align: center; color: #A0522D;">How many days I lived?</h2>
+	<div class="as1">
+	<input type="date" id="birthday" name="birthday">
+	<button onclick="HowManyDays()">Calculate</button>
+	</div>
+	<script>
+		function HowManyDays() {
+		var oneDay = 24*60*60*1000; 
+		var bd = new Date(document.getElementById("birthday").value);
+		var cd = new Date();
+		var diffDays = Math.round(Math.abs((bd.getTime() - cd.getTime())/(oneDay)));
+		alert(diffDays +" "+ "days");
+	}
+	</script>
+	<body>
+<h2 style="text-align: center; color: #A0522D;">Calculator</h2>		
+<div class="calc">		
+<table class="t1">
+<tr>
+<td><button class="bb" type="button" onclick="clr()">AC</button></td>
+<td colspan="3"><input type="text" id="inpRow"/></td>
+</tr>
+<tr>
+
+<td><button class="bb" type="button" onclick="dis('+')">+</button> </td>
+<td><button class="bb" type="button" onclick="dis('1')">1</button></td>
+<td><button class="bb" type="button" onclick="dis('2')">2</button></td>
+<td><button class="bb" type="button" onclick="dis('3')">3</button> </td>
+</tr>
+<tr>
+<td><button class="bb" type="button" onclick="dis('-')">-</button></td>
+<td><button class="bb" type="button" onclick="dis('4')">4</button></td>
+<td><button class="bb" type="button" onclick="dis('5')">5</button></td>
+<td><button class="bb" type="button" onclick="dis('6')">6</button></td>
+</tr>
+<tr>
+<td><button class="bb" type="button" onclick="dis('*')">*</button></td>
+<td><button class="bb" type="button" onclick="dis('7')">7</button></td>
+<td><button class="bb" type="button" onclick="dis('8')">8</button></td>
+<td><button class="bb" type="button" onclick="dis('9')">9</button></td>
+</tr>
+<tr>
+<td><button class="bb" type="button" onclick="dis('/')">/</button></td>
+<td><button class="bb" type="button" onclick="dis('.')">.</button></td>
+<td><button class="bb" type="button" onclick="dis('0')">0</button></td>
+
+<td><button class="bb" type="button" onclick="solve()">=</button></td>
+</tr>
+</table>
+</div>
+<script>
+
+function dis(val){
+document.getElementById("inpRow").value+=val;
+ }
+
+function solve(){
+var x = document.getElementById("inpRow").value;
+var y = eval(x);
+document.getElementById("inpRow").value = y;
+}
+
+function clr(){
+document.getElementById("inpRow").value = "";
+}
+</script>
+<h2 style="text-align: center; color: #A0522D;">Divisible number</h2>		
+<div class="divis">
+	<input  id="num" name="num">
+	<button onclick="Divisible()">Calculate</button>
+</div>
+<script>
+	function Divisible(){
+	var num = document.getElementById("num").value;
+	var result = [];
+	for(var i=1; i<=num; i++){
+		if(num%i==0){
+			result.push(i);
+		}
+	}alert(result);
+}
+</script>
+
+
+	</body>
+</html>
